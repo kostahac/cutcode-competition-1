@@ -30,10 +30,10 @@
                         @foreach ($posts as $post)
                             <tr>
                                 <td>{{ $loop->iteration }}. {{ $post->title }}</td>
-                                <td>{{ $post->category->title }}</td>
+                                <td>{{ $post->category_title }}</td>
                                 <td>{{ $post->created_at }}</td>
-                                <td>{{ number_format($post->ratings->avg('rating'), 2) }}</td>
-                                <td>{{ $post->ratings->count() }}</td>
+                                <td>{{ number_format($post->ratings_avg_rating, 2) }}</td>
+                                <td>{{ $post->ratings_count }}</td>
                             </tr>
                         @endforeach
                         </tbody>
